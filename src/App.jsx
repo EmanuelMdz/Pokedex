@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      <h1>POKEDEXsdfsdf</h1>
+      <h1>POKEDEX v1.0.1</h1>
     </>
   );
 }
