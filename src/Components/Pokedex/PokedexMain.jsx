@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { PokemonPreview } from "../Extras/PokemonPreview";
-
+import "./PokedexMain.css";
 export const PokedexMain = () => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch(
-        "https://pokeapi.co/api/v2/pokemon?offset=0&limit=100"
+        "https://pokeapi.co/api/v2/pokemon?offset=0&limit=9"
       );
       const data = await response.json();
       const pokeNames = data.results.map((pokemon) => pokemon.name);
@@ -44,9 +44,16 @@ export const PokedexMain = () => {
   const [data, setData] = useState([]);
 
   return (
-    <div>
+    <div className="containerPokedex">
       {data.map((pokemon) => (
-        <PokemonPreview key={pokemon.id} pokemon={pokemon} />
+        <div>
+          <PokemonPreview
+            key={pokemon.id}
+            name={pokemon.name}
+            img={pokemon.image}
+            number={pokemon.id}
+          />
+        </div>
       ))}
     </div>
   );
