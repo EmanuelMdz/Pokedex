@@ -5,8 +5,8 @@ import { PokedexMain } from "./Components/Pokedex/PokedexMain";
 function App() {
   return (
     <>
-      <Navbar/>
-      <PokedexMain/>
+      <Navbar />
+      <PokedexMain />
     </>
   );
 }
