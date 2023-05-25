@@ -11,7 +11,7 @@ const router = createBrowserRouter([
     element: <App></App>,
   },
   {
-    path: "/pokemon",
+    path: "/pokemon/:pokemonName",
     element: <PokemonFullScreen />,
   },
 ]);

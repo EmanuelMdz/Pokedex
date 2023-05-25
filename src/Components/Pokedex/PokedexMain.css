@@ -1,6 +1,6 @@
 .containerPokedex {
   display: flex;
-  max-width: 1400px;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 20px;
 }
