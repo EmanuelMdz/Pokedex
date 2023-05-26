@@ -2,9 +2,8 @@ import React from "react";
 
 export const ImgFull = (props) => {
   return (
-    <div>
-      <img src={props.image} alt="" />
-      <button></button>
+    <div className="imgCont">
+      <img className="imgFull" src={props.image} alt="" />
     </div>
   );
 };

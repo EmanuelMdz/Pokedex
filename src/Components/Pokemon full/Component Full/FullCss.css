@@ -1,0 +1,107 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+.navFull{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    gap: 60vh;
+    padding-top: 35px;
+    font-size: 30px;
+    text-transform: capitalize;
+    color: white;
+    align-items: center;
+}
+
+.navFullLeft{
+    display: flex;
+    font-size: 45px;
+    gap: 75px;
+}
+
+.contFull{
+    background-color:green;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20vh;
+}
+
+.imgNavFull{
+    width: 45px;
+}
+
+.linkFull{
+    display: flex;
+    align-items: center;
+}
+
+.imgFull{
+    width: 60vh;
+    position: relative;
+    top: 85px;
+}
+
+.imgCont{
+    display: flex;
+    justify-content: center;
+}
+
+.typePok{
+    display: flex;
+    justify-content: center;
+    text-transform: capitalize;
+    font-size: 30px;
+}
+
+.aboutText{
+    text-align: center;
+    font-size: 30px;
+    margin: 0px;
+}
+
+.aboutAndBase{
+    background-color: white;
+    width: 95%;
+    border-radius: 20px;
+    padding-top: 100px;
+}
+
+.propPok{
+    display: flex;
+    justify-content: center;
+}
+
+.descripAbout{
+    text-align: center;
+}
+
+.divStat{
+    display: flex;
+}
+
+.contStats{
+    width: 80%;
+}
+
+.titleBase{
+    text-align: center;
+    font-size: 30px;
+}
+
+.baseStats{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.typeStyle{
+    background-color: green;
+    border-radius: 30px;
+    padding: 3px 15px;
+}

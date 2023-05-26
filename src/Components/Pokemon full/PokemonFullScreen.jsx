@@ -4,6 +4,7 @@ import { ImgFull } from "./Component Full/ImgFull";
 import { AboutFull } from "./Component Full/AboutFull";
 import { BaseStats } from "./Component Full/BaseStats";
 import { useParams } from "react-router-dom";
+import "./Component Full/FullCss.css";
 
 export const PokemonFullScreen = (props) => {
   let { pokemonName } = useParams();
@@ -18,6 +19,7 @@ export const PokemonFullScreen = (props) => {
         name: pokemonData.name,
         id: pokemonData.id,
         image: pokemonData.sprites.front_default,
+        imageFull:pokemonData.sprites.other.dream_world.front_default,
         backImage: pokemonData.sprites.back_default,
         weight: pokemonData.weight,
         height: pokemonData.height,
@@ -28,8 +30,8 @@ export const PokemonFullScreen = (props) => {
         specialDefence: pokemonData.stats[4].base_stat,
         speed: pokemonData.stats[5].base_stat,
         type: pokemonData.types.map((type)=>type.type.name),
-        ability: pokemonData.abilities[0].ability.name,
-        ability2: pokemonData.abilities[1].ability.name,
+        ability: pokemonData.abilities.map(
+          (abilityObjet) => abilityObjet.ability.name),
       });
     };
     fetchData();
@@ -37,14 +39,13 @@ export const PokemonFullScreen = (props) => {
 
   const [data, setData] = useState([]);
   return (
-    <div>
-      <div>
-        <p>FullScreen</p>
+    <div className="contFull">
         <NavbarFull name={data.name} number={data.id} />
-        <ImgFull image={data.image} />
-        <AboutFull weight={data.weight} height={data.height} moves={data.ability} moves2={data.ability2} type={data.type}/>
-        <BaseStats hp={data.hp} atk={data.attack} def={data.defence} satk={data.specialAttack} sdef={data.specialDefence} spd={data.speed}   />
-      </div>
+        <ImgFull image={data.imageFull} />
+        <div className="aboutAndBase">
+          <AboutFull weight={data.weight} height={data.height} moves={data.ability} type={data.type}/>
+          <BaseStats hp={data.hp} atk={data.attack} def={data.defence} satk={data.specialAttack} sdef={data.specialDefence} spd={data.speed}   />
+        </div>
     </div>
   );
 };
