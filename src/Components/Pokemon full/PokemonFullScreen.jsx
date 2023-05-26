@@ -39,7 +39,7 @@ export const PokemonFullScreen = (props) => {
   return (
     <div>
       <div>
-        <p>FullScreens</p>
+        <p>FullScreen</p>
         <NavbarFull name={data.name} number={data.id} />
         <ImgFull image={data.image} />
         <AboutFull weight={data.weight} height={data.height} moves={data.ability} moves2={data.ability2} type={data.type}/>
