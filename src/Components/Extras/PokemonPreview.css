@@ -1,4 +1,147 @@
 .container_preview {
-  width: 100px;
-  background-color: antiquewhite;
+  width: 104px;
+  height: 108px;
+  background-color: white;
+  border-radius: 8px;
+  border-style: solid;
+  border-color: rgb(244, 235, 158);
+}
+.container_preview p {
+  text-decoration: none;
+  font-size: 13px;
+  color: gray;
+  margin-bottom: 0px;
+  margin-top: 3px;
+  margin-right: 3px;
+  text-align: right;
+}
+.imageContent {
+  display: flex;
+  justify-content: center;
+}
+.container_preview img {
+  width: 72px;
+  margin-top: -16px;
+}
+p.name {
+  text-align: center;
+  font-size: 15px;
+  color: black;
+  background-color: rgb(244, 235, 158);
+  height: 30px;
+  margin-top: -5px;
+  margin-right: 0px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  padding-top: 6px;
+}
+
+/* --------------TIPOS-------------- */
+.fire p.name {
+  background-color: #f57d31;
+}
+.fire {
+  border-color: #f57d31;
+}
+.rock p.name {
+  background-color: #b69e31;
+}
+.rock {
+  border-color: #b69e31;
+}
+.ghost p.name {
+  background-color: #70559b;
+}
+.ghost {
+  border-color: #70559b;
+}
+.steel p.name {
+  background-color: #b7b9d0;
+}
+.steel {
+  border-color: #b7b9d0;
+}
+.water p.name {
+  background-color: #6493eb;
+}
+.water {
+  border-color: #6493eb;
+}
+.grass p.name {
+  background-color: #74cb48;
+}
+.grass {
+  border-color: #74cb48;
+}
+.psychic p.name {
+  background-color: #fb5584;
+}
+.psychic {
+  border-color: #fb5584;
+}
+.ice p.name {
+  background-color: #9ad6df;
+}
+.ice {
+  border-color: #9ad6df;
+}
+.dark p.name {
+  background-color: #75574c;
+}
+.dark {
+  border-color: #75574c;
+}
+.fairy p.name {
+  background-color: #e69eac;
+}
+.fairy {
+  border-color: #e69eac;
+}
+.normal p.name {
+  background-color: #aaa67f;
+}
+.normal {
+  border-color: #aaa67f;
+}
+.fighting p.name {
+  background-color: #c12239;
+}
+.fighting {
+  border-color: #c12239;
+}
+.flying p.name {
+  background-color: #a891ec;
+}
+.flyin {
+  border-color: #a891ec;
+}
+.poison p.name {
+  background-color: #a43e9e;
+}
+.poison {
+  border-color: #a43e9e;
+}
+.ground p.name {
+  background-color: #dec16b;
+}
+.ground {
+  border-color: #dec16b;
+}
+.bug p.name {
+  background-color: #a78723;
+}
+.bug {
+  border-color: #a78723;
+}
+.electric p.name {
+  background-color: #f9cf30;
+}
+.electric {
+  border-color: #f9cf30;
+}
+.dragon p.name {
+  background-color: #7037ff;
+}
+.dragon {
+  border-color: #7037ff;
 }

@@ -29,9 +29,11 @@ export const PokemonFullScreen = (props) => {
         specialAttack: pokemonData.stats[3].base_stat,
         specialDefence: pokemonData.stats[4].base_stat,
         speed: pokemonData.stats[5].base_stat,
+
         type: pokemonData.types.map((type)=>type.type.name),
         ability: pokemonData.abilities.map(
           (abilityObjet) => abilityObjet.ability.name),
+
       });
     };
     fetchData();
@@ -41,11 +43,13 @@ export const PokemonFullScreen = (props) => {
   return (
     <div className="contFull">
         <NavbarFull name={data.name} number={data.id} />
+
         <ImgFull image={data.imageFull} />
         <div className="aboutAndBase">
           <AboutFull weight={data.weight} height={data.height} moves={data.ability} type={data.type}/>
           <BaseStats hp={data.hp} atk={data.attack} def={data.defence} satk={data.specialAttack} sdef={data.specialDefence} spd={data.speed}   />
         </div>
+
     </div>
   );
 };

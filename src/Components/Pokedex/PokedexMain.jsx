@@ -54,6 +54,7 @@ export const PokedexMain = () => {
               name={pokemon.name}
               img={pokemon.image}
               number={pokemon.id}
+              type={pokemon.type[0]}
             />
           </Link>
         </div>

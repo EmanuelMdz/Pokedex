@@ -1,4 +1,5 @@
 export const AboutFull = (props) => {
+
           return (
             <div>
               <div className="typePok">
@@ -26,4 +27,5 @@ export const AboutFull = (props) => {
               </div>
             </div>
           )
+
 };
