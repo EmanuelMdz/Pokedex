@@ -54,23 +54,26 @@ export const PokedexMain = () => {
 
   return (
     <div className="containerPokedex">
-      <Navbar data={data} filteredData={filteredData} setFilteredData={setFilteredData} />
+      <Navbar
+        data={data}
+        filteredData={filteredData}
+        setFilteredData={setFilteredData}
+      />
       <div className="pokemones_vistos">
         {filteredData.map((pokemon) => (
-        <div key={pokemon.id}>
-          <Link to={`/pokemon/${pokemon.name}`}>
-            <PokemonPreview
-              key={pokemon.id}
-              name={pokemon.name}
-              img={pokemon.image}
-              number={pokemon.id}
-            />
-          </Link>
-          
-        </div>
+          <div key={pokemon.id}>
+            <Link to={`/pokemon/${pokemon.name}`}>
+              <PokemonPreview
+                key={pokemon.id}
+                name={pokemon.name}
+                img={pokemon.image}
+                number={pokemon.id}
+                type={pokemon.type[0]}
+              />
+            </Link>
+          </div>
         ))}
       </div>
-      
     </div>
   );
 };
