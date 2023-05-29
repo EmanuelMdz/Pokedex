@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  flex-direction: column;
   gap: 15px;
   background-color: #efefef;
   border-radius: 8px;
@@ -9,4 +10,11 @@
 }
 a {
   text-decoration: none;
+}
+.pokemones_vistos{
+  display: flex;
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center; 
 }

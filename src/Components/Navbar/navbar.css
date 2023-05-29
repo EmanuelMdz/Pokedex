@@ -1,0 +1,28 @@
+.title_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+/* Texto de la barra de busqueda */
+.search_container{
+    display: flex;
+    justify-content: center;
+}
+/* Barra de busqueda */
+.input_search_bar{
+    width: 60%;
+    height: 30px;
+    border-radius: 30px;
+    text-align: center;
+}
+/* foto pokebola */
+.pokebola{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+h1{
+    margin: 0;
+    padding: 0;
+}
