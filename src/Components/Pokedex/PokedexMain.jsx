@@ -7,6 +7,8 @@ import Navbar from "../Navbar/Navbar";
 export const PokedexMain = () => {
   const [data, setData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -44,8 +46,10 @@ export const PokedexMain = () => {
 
         setData(pokemonData);
         setFilteredData(pokemonData);
+        setIsLoading(false);
       } catch (error) {
-        console.error("Error fetching Pokemon data:", error);
+        setError(true);
+        setIsLoading(false);
       }
     };
 
@@ -60,6 +64,10 @@ export const PokedexMain = () => {
         setFilteredData={setFilteredData}
       />
       <div className="pokemones_vistos">
+        {error && (
+          <div className="error">No se lograron cargar los pokemones</div>
+        )}
+        {isLoading && <div class="pokemon"></div>}
         {filteredData.map((pokemon) => (
           <div key={pokemon.id}>
             <Link to={`/pokemon/${pokemon.name}`}>
