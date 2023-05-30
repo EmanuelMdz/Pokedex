@@ -7,61 +7,75 @@ import { useParams } from "react-router-dom";
 import "./Component Full/FullCss.css";
 
 export const PokemonFullScreen = (props) => {
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(false);
   let { pokemonName } = useParams();
-  useEffect(() => {
-    const fetchData = async () => {
-      const pokemonResponse = await fetch(
-        `https://pokeapi.co/api/v2/pokemon/${pokemonName}`
-      );
-      const pokemonData = await pokemonResponse.json();
 
-      setData({
-        name: pokemonData.name,
-        id: pokemonData.id,
-        image: pokemonData.sprites.front_default,
-        imageFull: pokemonData.sprites.other.dream_world.front_default,
-        backImage: pokemonData.sprites.back_default,
-        weight: pokemonData.weight,
-        height: pokemonData.height,
-        hp: pokemonData.stats[0].base_stat,
-        attack: pokemonData.stats[1].base_stat,
-        defence: pokemonData.stats[2].base_stat,
-        specialAttack: pokemonData.stats[3].base_stat,
-        specialDefence: pokemonData.stats[4].base_stat,
-        speed: pokemonData.stats[5].base_stat,
-        type: pokemonData.types,
-        typecont: pokemonData.types[0].type.name,
-        typestyle: pokemonData.types[0].type.name,
-        ability: pokemonData.abilities,
-      });
-    };
+  const fetchData = async () => {
+    const pokemonResponse = await fetch(
+      `https://pokeapi.co/api/v2/pokemon/${pokemonName}`
+    );
+    const pokemonData = await pokemonResponse.json();
+
+    setData({
+      name: pokemonData.name,
+      id: pokemonData.id,
+      image: pokemonData.sprites.front_default,
+      imageFull: pokemonData.sprites.other.dream_world.front_default,
+      backImage: pokemonData.sprites.back_default,
+      weight: pokemonData.weight,
+      height: pokemonData.height,
+      hp: pokemonData.stats[0].base_stat,
+      attack: pokemonData.stats[1].base_stat,
+      defence: pokemonData.stats[2].base_stat,
+      specialAttack: pokemonData.stats[3].base_stat,
+      specialDefence: pokemonData.stats[4].base_stat,
+      speed: pokemonData.stats[5].base_stat,
+      type: pokemonData.types,
+      typecont: pokemonData.types[0].type.name,
+      typestyle: pokemonData.types[0].type.name,
+      ability: pokemonData.abilities,
+    });
+    setIsLoading(false);
+  };
+  useEffect(() => {
     fetchData();
+    setIsLoading(true);
   }, []);
-  
+
   const [data, setData] = useState([]);
   return (
     <div className={`contFull ${data.typecont}`}>
-      <NavbarFull name={data.name} number={data.id} />
+      {error && (
+        <div className="error">No se lograron cargar los pokemones</div>
+      )}
+      {isLoading ? (
+        <div class="pokemon"></div>
+      ) : (
+        <>
+          <NavbarFull name={data.name} number={data.id} />
 
-      <ImgFull image={data.imageFull} />
-      <div className="aboutAndBase">
-        <AboutFull
-          weight={data.weight}
-          height={data.height}
-          ability={data.ability}
-          type={data.type}
-          typestyle={data.typestyle}
-        />
-        <BaseStats
-          hp={data.hp}
-          atk={data.attack}
-          def={data.defence}
-          satk={data.specialAttack}
-          sdef={data.specialDefence}
-          spd={data.speed}
-          typestyle={data.typestyle}
-        />
-      </div>
+          <ImgFull image={data.imageFull} />
+          <div className="aboutAndBase">
+            <AboutFull
+              weight={data.weight}
+              height={data.height}
+              ability={data.ability}
+              type={data.type}
+              typestyle={data.typestyle}
+            />
+            <BaseStats
+              hp={data.hp}
+              atk={data.attack}
+              def={data.defence}
+              satk={data.specialAttack}
+              sdef={data.specialDefence}
+              spd={data.speed}
+              typestyle={data.typestyle}
+            />
+          </div>
+        </>
+      )}
     </div>
   );
 };
