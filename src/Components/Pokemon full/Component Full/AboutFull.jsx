@@ -1,26 +1,33 @@
 export const AboutFull = (props) => {
   return (
-    <div>
+    <div className="aboutClass">
       <div className="typePok">
         {props.type &&
           props.type.map((typeObjet) => {
-            return <p className="typeStyle">{typeObjet.type.name} </p>;
+            return <p className={`typeStyle ${typeObjet.type.name}`}>{typeObjet.type.name} </p>;
           })}
       </div>
-      <p className="aboutText">About</p>
+      <p className={`aboutText ${props.typestyle}Color`}>About</p>
       <div className="propPok">
         <div>
-          <img src="/Weight.svg" alt="" />
-          <p>{props.weight} kg</p>
+          <div>
+            <img src="/Weight.svg" alt="" />
+            <p>{props.weight} kg</p>
+          </div>
           <p>Weight</p>
         </div>
         <div>
-          <img src="/Height.svg" alt="" />
-          <p>0,{props.height} m</p>
+          <div>
+            <img src="/Height.svg" alt="" />
+            <p>0,{props.height} m</p>
+          </div>
           <p>Height</p>
         </div>
         <div>
-          <p>{props.moves}</p>
+        {props.ability &&
+          props.ability.map((typeObjet) => {
+            return <p className="">{typeObjet.ability.name} </p>;
+          })}
           <p>Moves</p>
         </div>
       </div>

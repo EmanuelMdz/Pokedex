@@ -22,7 +22,6 @@ body{
 }
 
 .contFull{
-    background-color:green;
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
     border-radius: 20px;
@@ -57,24 +56,27 @@ body{
     justify-content: center;
     text-transform: capitalize;
     font-size: 30px;
+    gap: 6vh;
 }
 
 .aboutText{
     text-align: center;
     font-size: 30px;
     margin: 0px;
+    padding-bottom: 7vh;
 }
 
 .aboutAndBase{
     background-color: white;
     width: 95%;
     border-radius: 20px;
-    padding-top: 100px;
+    padding: 12vh 0vh;
 }
 
 .propPok{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    width: 70%;
 }
 
 .descripAbout{
@@ -83,6 +85,20 @@ body{
 
 .divStat{
     display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.siglaSt{
+    width: 10%;
+}
+
+.valueSt{
+    width: 10%;
+}
+
+.progressBar{
+    width: 80%;
 }
 
 .contStats{
@@ -101,7 +117,127 @@ body{
 }
 
 .typeStyle{
-    background-color: green;
+    color: white;
     border-radius: 30px;
     padding: 3px 15px;
+}
+
+.aboutClass{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+/* --------------TIPOS-------------- */
+.fire {
+    background-color: #f57d31;
+  }
+.rock{
+    background-color: #b69e31;
+}
+.ghost{
+    background-color: #70559b;
+}
+.steel{
+    background-color: #b7b9d0;
+}
+.water{
+    background-color: #6493eb;
+}
+.grass{
+    background-color: #74cb48;
+}
+.psychic{
+    background-color: #fb5584;
+}
+.ice{
+    background-color: #9ad6df;
+}
+.dark{
+    background-color: #75574c;
+}
+.fairy{
+    background-color: #e69eac;
+}
+.normal{
+    background-color: #aaa67f;
+}
+.fighting{
+    background-color: #c12239;
+}
+.flying{
+    background-color: #a891ec;
+}
+.poison{
+    background-color: #a43e9e;
+}
+.ground{
+    background-color: #dec16b;
+}
+.bug{
+    background-color: #a78723;
+}
+.electric{
+    background-color: #f9cf30;
+}
+.dragon{
+    background-color: #7037ff;
+}
+
+
+.fireColor{
+    color: #f57d31;
+  }
+.rockColor{
+    color: #b69e31;
+}
+.ghostColor{
+    color: #70559b;
+}
+.steelColor{
+    color: #b7b9d0;
+}
+.waterColor{
+    color: #6493eb;
+}
+.grassColor{
+    color: #74cb48;
+}
+.psychicColor{
+    color: #fb5584;
+}
+.iceColor{
+    color: #9ad6df;
+}
+.darkColor{
+    color: #75574c;
+}
+.fairyColor{
+    color: #e69eac;
+}
+.normalColor{
+    color: #aaa67f;
+}
+.fightingColor{
+    color: #c12239;
+}
+.flyingColor{
+    color: #a891ec;
+}
+.poisonColor{
+    color: #a43e9e;
+}
+.groundColor{
+    color: #dec16b;
+}
+.bugColor{
+    color: #a78723;
+}
+.electricColor{
+    color: #f9cf30;
+}
+.dragonColor{
+    color: #7037ff;
 }
