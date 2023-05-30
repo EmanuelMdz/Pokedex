@@ -1,34 +1,42 @@
 import React from 'react'
 
+import ProgressBar from "@ramonak/react-progress-bar";
+
 export const BaseStats = (props) => {
   return <div className='baseStats'>
     <div className='titleBase'>
-      <p>Base Stats</p>
+      <p className={`${props.typestyle}Color`}>Base Stats</p>
     </div>
     <div className='contStats'>
       <div className='divStat'>
-        <p>HP</p>
-        <p>0{props.hp}</p>
+        <p className={`siglaSt ${props.typestyle}Color`}>HP</p>
+        <p className='valueSt'>0{props.hp}</p>
+        <ProgressBar className='progressBar' completed="60"/>
       </div>
       <div className='divStat'>
-        <p>ATK</p>
-        <p>0{props.atk}</p>
+        <p className={`siglaSt ${props.typestyle}Color`}>ATK</p>
+        <p className='valueSt'>0{props.atk}</p>
+        <ProgressBar className='progressBar' completed="60"/>
       </div>
       <div className='divStat'>
-        <p>DEF</p>
-        <p>0{props.def}</p>
+        <p className={`siglaSt ${props.typestyle}Color`}>DEF</p>
+        <p className='valueSt'>0{props.def}</p>
+        <ProgressBar className='progressBar' completed="60"/>
       </div>
       <div className='divStat'>
-        <p>SATK</p>
-        <p>0{props.satk}</p>
+        <p className={`siglaSt ${props.typestyle}Color`}>SATK</p>
+        <p className='valueSt'>0{props.satk}</p>
+        <ProgressBar className='progressBar' completed="60"/>
       </div>
       <div className='divStat'>
-        <p>SDEF</p>
-        <p>0{props.sdef}</p>
+        <p className={`siglaSt ${props.typestyle}Color`}>SDEF</p>
+        <p className='valueSt'>0{props.sdef}</p>
+        <ProgressBar className='progressBar' completed="60"/>
       </div>
       <div className='divStat'>
-        <p>SPD</p>
-        <p>0{props.spd}</p>
+        <p className={`siglaSt ${props.typestyle}Color`}>SPD</p>
+        <p className='valueSt'>0{props.spd}</p>
+        <ProgressBar className='progressBar' completed="60"/>
        </div>
     </div>
   </div>
