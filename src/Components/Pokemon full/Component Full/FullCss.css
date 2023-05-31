@@ -4,21 +4,23 @@ body{
 }
 
 .navFull{
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content: space-around;
-    gap: 60vh;
-    padding-top: 35px;
-    font-size: 30px;
+    font-size: 35px;
     text-transform: capitalize;
     color: white;
     align-items: center;
 }
 
+.navFull p{
+    margin: 0px;
+}
+
 .navFullLeft{
     display: flex;
     font-size: 45px;
-    gap: 75px;
+    gap: 35px;
 }
 
 .contFull{
@@ -28,7 +30,12 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 20vh;
+    padding: 5vh 0vh 18vh 0vh;
+    background-image: url(/PokeballBlanca.png);
+    background-repeat: no-repeat;
+    background-size: 83vh;
+    background-blend-mode: soft-light;
+    background-position: 97% 2%;
 }
 
 .imgNavFull{
@@ -41,9 +48,9 @@ body{
 }
 
 .imgFull{
-    width: 60vh;
+    width: 75vh;
     position: relative;
-    top: 85px;
+    top: 7vh;
 }
 
 .imgCont{
@@ -55,28 +62,29 @@ body{
     display: flex;
     justify-content: center;
     text-transform: capitalize;
-    font-size: 30px;
+    font-size: 40px;
     gap: 6vh;
 }
 
 .aboutText{
     text-align: center;
-    font-size: 30px;
+    font-size: 35px;
     margin: 0px;
     padding-bottom: 7vh;
 }
 
 .aboutAndBase{
     background-color: white;
-    width: 95%;
+    width: 80%;
     border-radius: 20px;
-    padding: 12vh 0vh;
+    padding: 10vh 0vh;
 }
 
 .propPok{
     display: flex;
-    justify-content: space-around;
-    width: 70%;
+    justify-content: center;
+    width: 80%;
+    align-items: end;
 }
 
 .descripAbout{
@@ -91,10 +99,16 @@ body{
 
 .siglaSt{
     width: 10%;
+    font-size: 25px;
+    margin: 0px;
+    text-align: end;
 }
 
 .valueSt{
     width: 10%;
+    font-size: 25px;
+    margin: 0px;
+    text-align: center;
 }
 
 .progressBar{
@@ -103,6 +117,9 @@ body{
 
 .contStats{
     width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
 }
 
 .titleBase{
@@ -118,8 +135,8 @@ body{
 
 .typeStyle{
     color: white;
-    border-radius: 30px;
-    padding: 3px 15px;
+    border-radius: 50px;
+    padding: 4px 25px;
 }
 
 .aboutClass{
@@ -128,6 +145,47 @@ body{
     align-items: center;
 }
 
+.aboutBoxes{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    font-size: 30px;
+    align-items: center;
+}
+
+.upBox{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 2vh;
+}
+
+.imgWeight{
+    width: 5vh;
+}
+
+.imgHeight{
+    width: 3vh;
+}
+
+.movesSt{
+    text-transform: capitalize;
+    margin: 0px;
+}
+
+.textoFijo{
+    font-size: 23px;
+    color: rgba(0, 0, 0, 70%);
+}
+
+.pBaseSt{
+    font-size: 35px;
+}
+
+.centralBox{
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
 
 
 /* --------------TIPOS-------------- */
@@ -240,4 +298,87 @@ body{
 }
 .dragonColor{
     color: #7037ff;
+}
+
+@media screen and (max-width: 375px) {
+
+.imgFull{
+    width: 30vh;
+}
+
+.contFull{
+    background-size: 38vh;
+    background-position: 95% 1%;
+    padding: 2vh 0vh 3vh 0vh;
+}
+
+.navFull{
+    font-size: 15px;
+}
+
+.navFullLeft{
+    font-size: 25px;
+    gap: 10px;
+}
+
+.imgNavFull{
+    width: 25px;
+}
+
+.typePok{
+    font-size: 15px;
+    gap: 2vh;
+}
+
+.aboutText{
+    font-size: 20px;
+    padding-bottom: 3vh;
+}
+
+.aboutBoxes{
+    font-size: 12px;
+}
+
+.imgHeight{
+    width: 2vh;
+}
+
+.imgWeight{
+    width: 4vh;
+}
+
+.textoFijo{
+    font-size: 10px;
+}
+
+.pBaseSt{
+    font-size: 20px;
+}
+
+.siglaSt{
+    font-size: 15px;
+    width: 15%;
+}
+
+.valueSt{
+    font-size: 15px;
+    width: 15%;
+}
+
+.progressBar{
+    width: 60%;
+}
+
+.divStat{
+    justify-content: space-evenly;
+}
+
+.aboutAndBase{
+    width: 90%;
+    padding: 7vh 0vh;
+}
+
+.propPok{
+    width: 95%;
+}
 }

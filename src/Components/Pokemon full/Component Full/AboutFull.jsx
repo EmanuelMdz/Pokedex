@@ -9,26 +9,26 @@ export const AboutFull = (props) => {
       </div>
       <p className={`aboutText ${props.typestyle}Color`}>About</p>
       <div className="propPok">
-        <div>
-          <div>
-            <img src="/Weight.svg" alt="" />
+        <div className="aboutBoxes">
+          <div className="upBox">
+            <img className="imgWeight" src="/Weight.svg" alt="" />
             <p>{props.weight} kg</p>
           </div>
-          <p>Weight</p>
+          <p className="textoFijo">Weight</p>
         </div>
-        <div>
-          <div>
-            <img src="/Height.svg" alt="" />
+        <div className="aboutBoxes centralBox">
+          <div className="upBox">
+            <img className="imgHeight" src="/Height.svg" alt="" />
             <p>0,{props.height} m</p>
           </div>
-          <p>Height</p>
+          <p className="textoFijo">Height</p>
         </div>
-        <div>
+        <div className="aboutBoxes">
         {props.ability &&
           props.ability.map((typeObjet) => {
-            return <p className="">{typeObjet.ability.name} </p>;
+            return <p className="movesSt">{typeObjet.ability.name} </p>;
           })}
-          <p>Moves</p>
+          <p className="textoFijo">Moves</p>
         </div>
       </div>
       <div className="descripAbout">

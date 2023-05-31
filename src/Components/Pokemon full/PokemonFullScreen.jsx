@@ -34,6 +34,7 @@ export const PokemonFullScreen = (props) => {
       type: pokemonData.types,
       typecont: pokemonData.types[0].type.name,
       typestyle: pokemonData.types[0].type.name,
+      typecolor: pokemonData.types[0].type.name,
       ability: pokemonData.abilities,
     });
     setIsLoading(false);
@@ -50,7 +51,7 @@ export const PokemonFullScreen = (props) => {
         <div className="error">No se lograron cargar los pokemones</div>
       )}
       {isLoading ? (
-        <div class="pokemon"></div>
+        <div className="pokemon"></div>
       ) : (
         <>
           <NavbarFull name={data.name} number={data.id} />
@@ -72,6 +73,7 @@ export const PokemonFullScreen = (props) => {
               sdef={data.specialDefence}
               spd={data.speed}
               typestyle={data.typestyle}
+              typecolor={data.typecolor}
             />
           </div>
         </>
