@@ -1,11 +1,9 @@
 .container_preview {
-  background-color: white !important;
+  background-color: rgba(255, 255, 255, 0.893) !important;
   width: 104px;
   height: 108px;
-  background-color: white;
   border-radius: 8px;
   border-style: solid;
-  border-color: rgb(244, 235, 158);
 }
 .container_preview p {
   text-decoration: none;
@@ -28,18 +26,21 @@ p.name {
   text-align: center;
   font-size: 15px;
   color: black;
-  background-color: rgb(244, 235, 158);
   height: 30px;
   margin-top: -5px;
   margin-right: 0px;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
-  padding-top: 6px;
+  padding-top: 8px;
 }
 
 /* --------------TIPOS-------------- */
 .fire p.name {
   background-color: #f57d31;
+}
+.container_p.fire {
+  color: #f57d31;
+  background-color: rgba(246, 246, 246, 0.774);
 }
 .fire {
   border-color: #f57d31;
@@ -47,11 +48,19 @@ p.name {
 .rock p.name {
   background-color: #b69e31;
 }
+.container_p.rock {
+  color: #b69e31;
+  background-color: rgba(246, 246, 246, 0.774);
+}
 .rock {
   border-color: #b69e31;
 }
 .ghost p.name {
   background-color: #70559b;
+}
+.container_p.ghost {
+  color: #70559b;
+  background-color: rgba(246, 246, 246, 0.774);
 }
 .ghost {
   border-color: #70559b;
@@ -59,11 +68,19 @@ p.name {
 .steel p.name {
   background-color: #b7b9d0;
 }
+.container_p.steel {
+  color: #b7b9d0;
+  background-color: rgba(246, 246, 246, 0.774);
+}
 .steel {
   border-color: #b7b9d0;
 }
 .water p.name {
   background-color: #6493eb;
+}
+.container_p.water {
+  color: #6493eb;
+  background-color: rgba(246, 246, 246, 0.774);
 }
 .water {
   border-color: #6493eb;
@@ -71,11 +88,19 @@ p.name {
 .grass p.name {
   background-color: #74cb48;
 }
+.container_p.grass {
+  color: #74cb48;
+  background-color: rgba(246, 246, 246, 0.774);
+}
 .grass {
   border-color: #74cb48;
 }
 .psychic p.name {
   background-color: #fb5584;
+}
+.container_p.psychic {
+  color: #fb5584;
+  background-color: rgba(246, 246, 246, 0.774);
 }
 .psychic {
   border-color: #fb5584;
@@ -83,11 +108,19 @@ p.name {
 .ice p.name {
   background-color: #9ad6df;
 }
+.container_p.ice {
+  color: #9ad6df;
+  background-color: rgba(246, 246, 246, 0.774);
+}
 .ice {
   border-color: #9ad6df;
 }
 .dark p.name {
   background-color: #75574c;
+}
+.container_p.dark {
+  color: #75574c;
+  background-color: rgba(246, 246, 246, 0.774);
 }
 .dark {
   border-color: #75574c;
@@ -95,17 +128,30 @@ p.name {
 .fairy p.name {
   background-color: #e69eac;
 }
+.container_p.fairy {
+  color: #e69eac;
+  background-color: rgba(246, 246, 246, 0.774);
+}
 .fairy {
   border-color: #e69eac;
 }
 .normal p.name {
   background-color: #aaa67f;
 }
+.container_p.normal {
+  color: #aaa67f;
+  background-color: rgba(246, 246, 246, 0.774);
+}
 .normal {
   border-color: #aaa67f;
 }
+
 .fighting p.name {
   background-color: #c12239;
+}
+.container_p.fighting {
+  color: #c12239;
+  background-color: rgba(246, 246, 246, 0.774);
 }
 .fighting {
   border-color: #c12239;
@@ -113,11 +159,19 @@ p.name {
 .flying p.name {
   background-color: #a891ec;
 }
+.container_p.flying {
+  color: #a891ec;
+  background-color: rgba(246, 246, 246, 0.774);
+}
 .flyin {
   border-color: #a891ec;
 }
 .poison p.name {
   background-color: #a43e9e;
+}
+.container_p.poison {
+  color: #a43e9e;
+  background-color: rgba(246, 246, 246, 0.774);
 }
 .poison {
   border-color: #a43e9e;
@@ -125,11 +179,19 @@ p.name {
 .ground p.name {
   background-color: #dec16b;
 }
+.container_p.ground {
+  color: #dec16b;
+  background-color: rgba(246, 246, 246, 0.774);
+}
 .ground {
   border-color: #dec16b;
 }
 .bug p.name {
   background-color: #a78723;
+}
+.container_p.bug {
+  color: #a78723;
+  background-color: rgba(246, 246, 246, 0.774);
 }
 .bug {
   border-color: #a78723;
@@ -137,11 +199,19 @@ p.name {
 .electric p.name {
   background-color: #f9cf30;
 }
+.container_p.electric {
+  color: #f9cf30;
+  background-color: rgba(246, 246, 246, 0.774);
+}
 .electric {
   border-color: #f9cf30;
 }
 .dragon p.name {
   background-color: #7037ff;
+}
+.container_p.dragon {
+  color: #7037ff;
+  background-color: rgba(246, 246, 246, 0.774);
 }
 .dragon {
   border-color: #7037ff;
