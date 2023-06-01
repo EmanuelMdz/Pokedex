@@ -3,11 +3,18 @@ body{
     padding: 0px;
 }
 
+.fondoGral{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1% 0%;
+}
+
 .navFull{
-    width: 90%;
+    width: 100%;
     display: flex;
     justify-content: space-around;
-    font-size: 35px;
+    font-size: 15px;
     text-transform: capitalize;
     color: white;
     align-items: center;
@@ -19,8 +26,8 @@ body{
 
 .navFullLeft{
     display: flex;
-    font-size: 45px;
-    gap: 35px;
+    font-size: 20px;
+    gap: 15px;
 }
 
 .contFull{
@@ -30,16 +37,17 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 5vh 0vh 18vh 0vh;
+    padding: 3vh 0vh 0vh 0vh;
     background-image: url(/PokeballBlanca.png);
     background-repeat: no-repeat;
-    background-size: 83vh;
+    background-size: 40vh;
     background-blend-mode: soft-light;
-    background-position: 97% 2%;
+    background-position: 97% 1%;
+    width: 580px;
 }
 
 .imgNavFull{
-    width: 45px;
+    width: 30px;
 }
 
 .linkFull{
@@ -48,9 +56,10 @@ body{
 }
 
 .imgFull{
-    width: 75vh;
+    width: 30vh;
     position: relative;
-    top: 7vh;
+    top: 1vh;
+    z-index: 1;
 }
 
 .imgCont{
@@ -62,28 +71,31 @@ body{
     display: flex;
     justify-content: center;
     text-transform: capitalize;
-    font-size: 40px;
-    gap: 6vh;
+    font-size: 15px;
+    gap: 15px;
 }
 
 .aboutText{
     text-align: center;
-    font-size: 35px;
+    font-size: 15px;
     margin: 0px;
-    padding-bottom: 7vh;
+    padding-bottom: 2vh;
 }
 
 .aboutAndBase{
     background-color: white;
-    width: 80%;
+    width: 90%;
     border-radius: 20px;
-    padding: 10vh 0vh;
+    padding: 7vh 0vh 3vh 0vh; 
+    position: relative;
+    bottom: 5vh;
+    margin-bottom: -10px;
 }
 
 .propPok{
     display: flex;
     justify-content: center;
-    width: 80%;
+    width: 90%;
     align-items: end;
 }
 
@@ -99,14 +111,14 @@ body{
 
 .siglaSt{
     width: 10%;
-    font-size: 25px;
+    font-size: 15px;
     margin: 0px;
     text-align: end;
 }
 
 .valueSt{
     width: 10%;
-    font-size: 25px;
+    font-size: 15px;
     margin: 0px;
     text-align: center;
 }
@@ -137,6 +149,7 @@ body{
     color: white;
     border-radius: 50px;
     padding: 4px 25px;
+    margin: 0px 0px 5px 0px;
 }
 
 .aboutClass{
@@ -149,7 +162,7 @@ body{
     display: flex;
     flex-direction: column;
     width: 30%;
-    font-size: 30px;
+    font-size: 12px;
     align-items: center;
 }
 
@@ -161,11 +174,11 @@ body{
 }
 
 .imgWeight{
-    width: 5vh;
+    width: 4vh;
 }
 
 .imgHeight{
-    width: 3vh;
+    width: 2vh;
 }
 
 .movesSt{
@@ -174,12 +187,13 @@ body{
 }
 
 .textoFijo{
-    font-size: 23px;
+    font-size: 10px;
     color: rgba(0, 0, 0, 70%);
 }
 
 .pBaseSt{
-    font-size: 35px;
+    font-size: 15px;
+    margin: 0px 0px 5px 0px;
 }
 
 .centralBox{
@@ -300,85 +314,3 @@ body{
     color: #7037ff;
 }
 
-@media screen and (max-width: 375px) {
-
-.imgFull{
-    width: 30vh;
-}
-
-.contFull{
-    background-size: 38vh;
-    background-position: 95% 1%;
-    padding: 2vh 0vh 3vh 0vh;
-}
-
-.navFull{
-    font-size: 15px;
-}
-
-.navFullLeft{
-    font-size: 25px;
-    gap: 10px;
-}
-
-.imgNavFull{
-    width: 25px;
-}
-
-.typePok{
-    font-size: 15px;
-    gap: 2vh;
-}
-
-.aboutText{
-    font-size: 20px;
-    padding-bottom: 3vh;
-}
-
-.aboutBoxes{
-    font-size: 12px;
-}
-
-.imgHeight{
-    width: 2vh;
-}
-
-.imgWeight{
-    width: 4vh;
-}
-
-.textoFijo{
-    font-size: 10px;
-}
-
-.pBaseSt{
-    font-size: 20px;
-}
-
-.siglaSt{
-    font-size: 15px;
-    width: 15%;
-}
-
-.valueSt{
-    font-size: 15px;
-    width: 15%;
-}
-
-.progressBar{
-    width: 60%;
-}
-
-.divStat{
-    justify-content: space-evenly;
-}
-
-.aboutAndBase{
-    width: 90%;
-    padding: 7vh 0vh;
-}
-
-.propPok{
-    width: 95%;
-}
-}

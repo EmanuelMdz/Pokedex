@@ -4,7 +4,7 @@ import ProgressBar from "@ramonak/react-progress-bar";
 export const BaseStats = (props) =>{
 let prueba= "";
   switch (props.typecolor) {
-  case "fair":
+  case "fire":
     prueba="#f57d31";    
     break;
   case "rock":
@@ -70,32 +70,32 @@ let prueba= "";
       <div className='divStat'>
         <p className={`siglaSt ${props.typestyle}Color`}>HP</p>
         <p className='valueSt'>0{props.hp}</p>
-        <ProgressBar className='progressBar' maxCompleted={250} isLabelVisible={false} bgColor={prueba} completed={props.hp}/>
+        <ProgressBar className='progressBar' maxCompleted={250} isLabelVisible={false} height='10px' bgColor={prueba} completed={props.hp}/>
       </div>
       <div className='divStat'>
         <p className={`siglaSt ${props.typestyle}Color`}>ATK</p>
         <p className='valueSt'>0{props.atk}</p>
-        <ProgressBar className='progressBar' maxCompleted={250} isLabelVisible={false} bgColor={prueba} completed={props.atk}/>
+        <ProgressBar className='progressBar' maxCompleted={250} isLabelVisible={false} height='10px' bgColor={prueba} completed={props.atk}/>
       </div>
       <div className='divStat'>
         <p className={`siglaSt ${props.typestyle}Color`}>DEF</p>
         <p className='valueSt'>0{props.def}</p>
-        <ProgressBar className='progressBar' maxCompleted={250} isLabelVisible={false} bgColor={prueba} completed={props.def}/>
+        <ProgressBar className='progressBar' maxCompleted={250} isLabelVisible={false} height='10px' bgColor={prueba} completed={props.def}/>
       </div>
       <div className='divStat'>
         <p className={`siglaSt ${props.typestyle}Color`}>SATK</p>
         <p className='valueSt'>0{props.satk}</p>
-        <ProgressBar className='progressBar' maxCompleted={250} isLabelVisible={false} bgColor={prueba} completed={props.satk}/>
+        <ProgressBar className='progressBar' maxCompleted={250} isLabelVisible={false} height='10px' bgColor={prueba} completed={props.satk}/>
       </div>
       <div className='divStat'>
         <p className={`siglaSt ${props.typestyle}Color`}>SDEF</p>
         <p className='valueSt'>0{props.sdef}</p>
-        <ProgressBar className='progressBar' maxCompleted={250} isLabelVisible={false} bgColor={prueba} completed={props.sdef}/>
+        <ProgressBar className='progressBar' maxCompleted={250} isLabelVisible={false} height='10px' bgColor={prueba} completed={props.sdef}/>
       </div>
       <div className='divStat'>
         <p className={`siglaSt ${props.typestyle}Color`}>SPD</p>
         <p className='valueSt'>0{props.spd}</p>
-        <ProgressBar className='progressBar' maxCompleted={250} isLabelVisible={false} bgColor={prueba} completed={props.spd}/>
+        <ProgressBar className='progressBar' maxCompleted={250} isLabelVisible={false} height='10px' bgColor={prueba} completed={props.spd}/>
        </div>
     </div>
   </div>
