@@ -47,35 +47,38 @@ export const PokemonFullScreen = (props) => {
   const [data, setData] = useState([]);
   return (
     <div className="fondoGral">
-      {error && (<div className="error">No se lograron cargar los pokemones</div>)}
+      {error && (
+        <div className="error">No se lograron cargar los pokemones</div>
+      )}
       {isLoading ? (
         <div className="pokemon"></div>
       ) : (
         <div className={`contFull ${data.typecont}`}>
-            <>
-              <NavbarFull name={data.name} number={data.id} />
+          <>
+            <NavbarFull name={data.name} number={data.id} />
 
-              <ImgFull image={data.imageFull} />
-              <div className="aboutAndBase">
-                <AboutFull
-                  weight={data.weight}
-                  height={data.height}
-                  ability={data.ability}
-                  type={data.type}
-                  typestyle={data.typestyle}
-                />
-                <BaseStats
-                  hp={data.hp}
-                  atk={data.attack}
-                  def={data.defence}
-                  satk={data.specialAttack}
-                  sdef={data.specialDefence}
-                  spd={data.speed}
-                  typestyle={data.typestyle}
-                  typecolor={data.typecolor}
-                />
-              </div>
-            </>
+            <ImgFull image={data.imageFull} id={data.id} />
+            <div className="aboutAndBase">
+              <AboutFull
+                weight={data.weight}
+                height={data.height}
+                ability={data.ability}
+                type={data.type}
+                typestyle={data.typestyle}
+                id={data.id}
+              />
+              <BaseStats
+                hp={data.hp}
+                atk={data.attack}
+                def={data.defence}
+                satk={data.specialAttack}
+                sdef={data.specialDefence}
+                spd={data.speed}
+                typestyle={data.typestyle}
+                typecolor={data.typecolor}
+              />
+            </div>
+          </>
         </div>
       )}
     </div>

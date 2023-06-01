@@ -1,316 +1,355 @@
-body{
-    margin: 0px;
-    padding: 0px;
+body {
+  margin: 0px;
+  padding: 0px;
 }
 
-.fondoGral{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1% 0%;
+.fondoGral {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1% 0%;
+  height: 100vh;
 }
 
-.navFull{
+.navFull {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  font-size: 15px;
+  text-transform: capitalize;
+  color: white;
+  align-items: center;
+}
+
+.navFull p {
+  margin: 0px;
+}
+
+.navFullLeft {
+  display: flex;
+  font-size: 20px;
+  gap: 15px;
+}
+
+.contFull {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3vh 0vh 0vh 0vh;
+  background-image: url(/PokeballBlanca.png);
+  background-repeat: no-repeat;
+  background-size: 40vh;
+  background-blend-mode: soft-light;
+  background-position: 97% 1%;
+  width: 580px;
+  box-shadow: 10px 11px 18px 7px rgba(0, 0, 0, 0.23);
+}
+/* flechas*/
+.imgCont a img {
+  width: 30px;
+  position: relative;
+  top: 60%;
+}
+.nav__flecha__izq {
+  position: relative;
+  right: 40px;
+}
+.nav__flecha__der {
+  position: relative;
+  left: 40px;
+}
+.imgNavFull {
+  width: 30px;
+}
+
+.linkFull {
+  display: flex;
+  align-items: center;
+}
+
+.imgFull {
+  width: 30vh;
+  position: relative;
+  top: 1vh;
+  z-index: 1;
+}
+
+.imgCont {
+  display: flex;
+  justify-content: center;
+}
+
+.typePok {
+  display: flex;
+  justify-content: center;
+  text-transform: capitalize;
+  font-size: 15px;
+  gap: 15px;
+}
+
+.aboutText {
+  text-align: center;
+  font-size: 15px;
+  margin: 0px;
+  padding-bottom: 2vh;
+}
+
+.aboutAndBase {
+  background-color: white;
+  width: 90%;
+  border-radius: 20px;
+  padding: 7vh 0vh 3vh 0vh;
+  position: relative;
+  bottom: 5vh;
+  margin-bottom: -10px;
+}
+
+.propPok {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  align-items: end;
+}
+
+.descripAbout {
+  text-align: center;
+}
+
+.divStat {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.siglaSt {
+  width: 10%;
+  font-size: 15px;
+  margin: 0px;
+  text-align: end;
+}
+
+.valueSt {
+  width: 10%;
+  font-size: 15px;
+  margin: 0px;
+  text-align: center;
+}
+
+.progressBar {
+  width: 80%;
+}
+
+.contStats {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.titleBase {
+  text-align: center;
+  font-size: 30px;
+}
+
+.baseStats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.typeStyle {
+  color: white;
+  border-radius: 50px;
+  padding: 4px 25px;
+  margin: 0px 0px 5px 0px;
+}
+
+.aboutClass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aboutBoxes {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  font-size: 12px;
+  align-items: center;
+}
+
+.upBox {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 2vh;
+}
+
+.imgWeight {
+  width: 4vh;
+}
+
+.imgHeight {
+  width: 2vh;
+}
+
+.movesSt {
+  text-transform: capitalize;
+  margin: 0px;
+}
+
+.textoFijo {
+  font-size: 10px;
+  color: rgba(0, 0, 0, 70%);
+}
+
+.pBaseSt {
+  font-size: 15px;
+  margin: 0px 0px 5px 0px;
+}
+
+.centralBox {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+/* -------------MEDIA QUERY------------ */
+
+@media (max-width: 464px) {
+  .contFull {
     width: 100%;
-    display: flex;
-    justify-content: space-around;
-    font-size: 15px;
-    text-transform: capitalize;
-    color: white;
-    align-items: center;
-}
-
-.navFull p{
-    margin: 0px;
-}
-
-.navFullLeft{
-    display: flex;
-    font-size: 20px;
-    gap: 15px;
-}
-
-.contFull{
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 3vh 0vh 0vh 0vh;
-    background-image: url(/PokeballBlanca.png);
-    background-repeat: no-repeat;
-    background-size: 40vh;
-    background-blend-mode: soft-light;
-    background-position: 97% 1%;
-    width: 580px;
-}
-
-.imgNavFull{
-    width: 30px;
-}
-
-.linkFull{
-    display: flex;
-    align-items: center;
-}
-
-.imgFull{
-    width: 30vh;
-    position: relative;
-    top: 1vh;
-    z-index: 1;
-}
-
-.imgCont{
-    display: flex;
-    justify-content: center;
-}
-
-.typePok{
-    display: flex;
-    justify-content: center;
-    text-transform: capitalize;
-    font-size: 15px;
-    gap: 15px;
-}
-
-.aboutText{
-    text-align: center;
-    font-size: 15px;
-    margin: 0px;
-    padding-bottom: 2vh;
-}
-
-.aboutAndBase{
-    background-color: white;
-    width: 90%;
-    border-radius: 20px;
-    padding: 7vh 0vh 3vh 0vh; 
-    position: relative;
-    bottom: 5vh;
-    margin-bottom: -10px;
-}
-
-.propPok{
-    display: flex;
-    justify-content: center;
-    width: 90%;
-    align-items: end;
-}
-
-.descripAbout{
-    text-align: center;
-}
-
-.divStat{
-    display: flex;
-    width: 100%;
-    align-items: center;
-}
-
-.siglaSt{
-    width: 10%;
-    font-size: 15px;
-    margin: 0px;
-    text-align: end;
-}
-
-.valueSt{
-    width: 10%;
-    font-size: 15px;
-    margin: 0px;
-    text-align: center;
-}
-
-.progressBar{
-    width: 80%;
-}
-
-.contStats{
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    gap: 1vh;
-}
-
-.titleBase{
-    text-align: center;
-    font-size: 30px;
-}
-
-.baseStats{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.typeStyle{
-    color: white;
-    border-radius: 50px;
-    padding: 4px 25px;
-    margin: 0px 0px 5px 0px;
-}
-
-.aboutClass{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.aboutBoxes{
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    font-size: 12px;
-    align-items: center;
-}
-
-.upBox{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    gap: 2vh;
-}
-
-.imgWeight{
-    width: 4vh;
-}
-
-.imgHeight{
-    width: 2vh;
-}
-
-.movesSt{
-    text-transform: capitalize;
-    margin: 0px;
-}
-
-.textoFijo{
+    height: 100%;
+    box-shadow: none;
+    border-radius: 0px;
+  }
+  .fondoGral {
+    padding: 0% 0%;
+  }
+  .imgHeight {
+    width: 1.5vh;
+  }
+  .imgWeight {
+    width: 3vh;
+  }
+  /* --textos-- */
+  p.siglaSt {
     font-size: 10px;
-    color: rgba(0, 0, 0, 70%);
+  }
+  p.valueSt {
+    font-size: 10px;
+  }
 }
-
-.pBaseSt{
-    font-size: 15px;
-    margin: 0px 0px 5px 0px;
-}
-
-.centralBox{
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-}
-
 
 /* --------------TIPOS-------------- */
 .fire {
-    background-color: #f57d31;
-  }
-.rock{
-    background-color: #b69e31;
+  background-color: #f57d31;
 }
-.ghost{
-    background-color: #70559b;
+.rock {
+  background-color: #b69e31;
 }
-.steel{
-    background-color: #b7b9d0;
+.ghost {
+  background-color: #70559b;
 }
-.water{
-    background-color: #6493eb;
+.steel {
+  background-color: #b7b9d0;
 }
-.grass{
-    background-color: #74cb48;
+.water {
+  background-color: #6493eb;
 }
-.psychic{
-    background-color: #fb5584;
+.grass {
+  background-color: #74cb48;
 }
-.ice{
-    background-color: #9ad6df;
+.psychic {
+  background-color: #fb5584;
 }
-.dark{
-    background-color: #75574c;
+.ice {
+  background-color: #9ad6df;
 }
-.fairy{
-    background-color: #e69eac;
+.dark {
+  background-color: #75574c;
 }
-.normal{
-    background-color: #aaa67f;
+.fairy {
+  background-color: #e69eac;
 }
-.fighting{
-    background-color: #c12239;
+.normal {
+  background-color: #aaa67f;
 }
-.flying{
-    background-color: #a891ec;
+.fighting {
+  background-color: #c12239;
 }
-.poison{
-    background-color: #a43e9e;
+.flying {
+  background-color: #a891ec;
 }
-.ground{
-    background-color: #dec16b;
+.poison {
+  background-color: #a43e9e;
 }
-.bug{
-    background-color: #a78723;
+.ground {
+  background-color: #dec16b;
 }
-.electric{
-    background-color: #f9cf30;
+.bug {
+  background-color: #a78723;
 }
-.dragon{
-    background-color: #7037ff;
+.electric {
+  background-color: #f9cf30;
 }
-
-
-.fireColor{
-    color: #f57d31;
-  }
-.rockColor{
-    color: #b69e31;
-}
-.ghostColor{
-    color: #70559b;
-}
-.steelColor{
-    color: #b7b9d0;
-}
-.waterColor{
-    color: #6493eb;
-}
-.grassColor{
-    color: #74cb48;
-}
-.psychicColor{
-    color: #fb5584;
-}
-.iceColor{
-    color: #9ad6df;
-}
-.darkColor{
-    color: #75574c;
-}
-.fairyColor{
-    color: #e69eac;
-}
-.normalColor{
-    color: #aaa67f;
-}
-.fightingColor{
-    color: #c12239;
-}
-.flyingColor{
-    color: #a891ec;
-}
-.poisonColor{
-    color: #a43e9e;
-}
-.groundColor{
-    color: #dec16b;
-}
-.bugColor{
-    color: #a78723;
-}
-.electricColor{
-    color: #f9cf30;
-}
-.dragonColor{
-    color: #7037ff;
+.dragon {
+  background-color: #7037ff;
 }
 
+.fireColor {
+  color: #f57d31;
+}
+.rockColor {
+  color: #b69e31;
+}
+.ghostColor {
+  color: #70559b;
+}
+.steelColor {
+  color: #b7b9d0;
+}
+.waterColor {
+  color: #6493eb;
+}
+.grassColor {
+  color: #74cb48;
+}
+.psychicColor {
+  color: #fb5584;
+}
+.iceColor {
+  color: #9ad6df;
+}
+.darkColor {
+  color: #75574c;
+}
+.fairyColor {
+  color: #e69eac;
+}
+.normalColor {
+  color: #aaa67f;
+}
+.fightingColor {
+  color: #c12239;
+}
+.flyingColor {
+  color: #a891ec;
+}
+.poisonColor {
+  color: #a43e9e;
+}
+.groundColor {
+  color: #dec16b;
+}
+.bugColor {
+  color: #a78723;
+}
+.electricColor {
+  color: #f9cf30;
+}
+.dragonColor {
+  color: #7037ff;
+}

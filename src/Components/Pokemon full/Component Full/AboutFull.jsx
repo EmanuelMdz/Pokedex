@@ -4,7 +4,13 @@ export const AboutFull = (props) => {
       <div className="typePok">
         {props.type &&
           props.type.map((typeObjet) => {
-            return <p className={`typeStyle ${typeObjet.type.name}`}>{typeObjet.type.name} </p>;
+            return (
+              <div key={props.id}>
+                <p className={`typeStyle ${typeObjet.type.name}`}>
+                  {typeObjet.type.name}{" "}
+                </p>
+              </div>
+            );
           })}
       </div>
       <p className={`aboutText ${props.typestyle}Color`}>About</p>
@@ -24,10 +30,14 @@ export const AboutFull = (props) => {
           <p className="textoFijo">Height</p>
         </div>
         <div className="aboutBoxes">
-        {props.ability &&
-          props.ability.map((typeObjet) => {
-            return <p className="movesSt">{typeObjet.ability.name} </p>;
-          })}
+          {props.ability &&
+            props.ability.map((typeObjet) => {
+              return (
+                <div key={props.id}>
+                  <p className="movesSt">{typeObjet.ability.name} </p>
+                </div>
+              );
+            })}
           <p className="textoFijo">Moves</p>
         </div>
       </div>
