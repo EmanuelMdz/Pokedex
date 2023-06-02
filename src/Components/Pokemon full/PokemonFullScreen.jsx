@@ -9,8 +9,13 @@ import "./Component Full/FullCss.css";
 export const PokemonFullScreen = (props) => {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(false);
+  const [nameprev, setNameprev] = useState("");
+  const [namenext, setNamenext] = useState("");
   let { pokemonName } = useParams();
-
+  
+  const [data, setData] = useState({});
+  
+  useEffect(() => {
   const fetchData = async () => {
     const pokemonResponse = await fetch(
       `https://pokeapi.co/api/v2/pokemon/${pokemonName}`
@@ -39,12 +44,37 @@ export const PokemonFullScreen = (props) => {
     });
     setIsLoading(false);
   };
-  useEffect(() => {
     fetchData();
     setIsLoading(true);
   }, []);
+  
+  
+  useEffect(() => {
+    const fetchDataPrev = async () => {
+      const pokemonResponse = await fetch(
+        `https://pokeapi.co/api/v2/pokemon/${data.id-1}`
+        );
+        const pokemonData = await pokemonResponse.json();
+        setNameprev(pokemonData.name)
+      console.log(pokemonData.name) 
+      
+    }
+    const fetchDataNext = async () => {
+      const pokemonResponse = await fetch(
+        `https://pokeapi.co/api/v2/pokemon/${data.id+1}`
+        );
+        const pokemonData = await pokemonResponse.json();
+        setNamenext(pokemonData.name)
+        console.log(pokemonData.name) 
+        
+      }
+      
+      fetchDataNext();
+      fetchDataPrev();
+    }, [data]);
 
-  const [data, setData] = useState([]);
+    console.log(data.id)
+
   return (
     <div className="fondoGral">
       {error && (
@@ -57,7 +87,7 @@ export const PokemonFullScreen = (props) => {
           <>
             <NavbarFull name={data.name} number={data.id} />
 
-            <ImgFull image={data.imageFull} id={data.id} />
+            <ImgFull image={data.imageFull} id={data.id} nameprev={nameprev} namenext={namenext} />
             <div className="aboutAndBase">
               <AboutFull
                 weight={data.weight}
