@@ -11,6 +11,7 @@ export const PokemonFullScreen = (props) => {
   const [error, setError] = useState(false);
   const [nameprev, setNameprev] = useState("");
   const [namenext, setNamenext] = useState("");
+
   let { pokemonName } = useParams();
 
   const [data, setData] = useState({});
@@ -18,63 +19,69 @@ export const PokemonFullScreen = (props) => {
   useEffect(() => {
     fetchData();
     setIsLoading(true);
-  }, []);
-  const fetchData = async () => {
-    const pokemonResponse = await fetch(
-      `https://pokeapi.co/api/v2/pokemon/${pokemonName}`
-    );
-    const pokemonData = await pokemonResponse.json();
+  }, [pokemonName]);
 
-    setData({
-      name: pokemonData.name,
-      id: pokemonData.id,
-      image: pokemonData.sprites.front_default,
-      imageFull: pokemonData.sprites.other.dream_world.front_default,
-      backImage: pokemonData.sprites.back_default,
-      weight: pokemonData.weight,
-      height: pokemonData.height,
-      hp: pokemonData.stats[0].base_stat,
-      attack: pokemonData.stats[1].base_stat,
-      defence: pokemonData.stats[2].base_stat,
-      specialAttack: pokemonData.stats[3].base_stat,
-      specialDefence: pokemonData.stats[4].base_stat,
-      speed: pokemonData.stats[5].base_stat,
-      type: pokemonData.types,
-      typecont: pokemonData.types[0].type.name,
-      typestyle: pokemonData.types[0].type.name,
-      typecolor: pokemonData.types[0].type.name,
-      ability: pokemonData.abilities,
-    });
+  const fetchData = async () => {
+    try {
+      const pokemonResponse = await fetch(
+        `https://pokeapi.co/api/v2/pokemon/${pokemonName}`
+      );
+      const pokemonData = await pokemonResponse.json();
+
+      setData({
+        name: pokemonData.name,
+        id: pokemonData.id,
+        image: pokemonData.sprites.front_default,
+        imageFull: pokemonData.sprites.other.dream_world.front_default,
+        backImage: pokemonData.sprites.back_default,
+        weight: pokemonData.weight,
+        height: pokemonData.height,
+        hp: pokemonData.stats[0].base_stat,
+        attack: pokemonData.stats[1].base_stat,
+        defence: pokemonData.stats[2].base_stat,
+        specialAttack: pokemonData.stats[3].base_stat,
+        specialDefence: pokemonData.stats[4].base_stat,
+        speed: pokemonData.stats[5].base_stat,
+        type: pokemonData.types,
+        typecont: pokemonData.types[0].type.name,
+        typestyle: pokemonData.types[0].type.name,
+        typecolor: pokemonData.types[0].type.name,
+        ability: pokemonData.abilities,
+      });
+    } catch (error) {
+      setError(true);
+    }
     setIsLoading(false);
   };
+
   useEffect(() => {
     fetchDataNext();
     fetchDataPrev();
   }, [data]);
 
   const fetchDataPrev = async () => {
-    const pokemonResponse = await fetch(
-      `https://pokeapi.co/api/v2/pokemon/${data.id - 1}`
-    );
-    const pokemonData = await pokemonResponse.json();
-    setNameprev(pokemonData.name);
-    console.log(pokemonData.name);
+    try {
+      const pokemonResponse = await fetch(
+        `https://pokeapi.co/api/v2/pokemon/${data.id - 1}`
+      );
+      const pokemonData = await pokemonResponse.json();
+      setNameprev(pokemonData.name);
+    } catch (error) {
+      setNameprev("");
+    }
   };
-  const fetchDataNext = async () => {
-    const pokemonResponse = await fetch(
-      `https://pokeapi.co/api/v2/pokemon/${data.id + 1}`
-    );
-    const pokemonData = await pokemonResponse.json();
-    setNamenext(pokemonData.name);
-    console.log(pokemonData.name);
-  };
-  useEffect(() => {
-    fetchData();
-    fetchDataNext();
-    fetchDataPrev();
-  }, [pokemonName]);
 
-  console.log(data.id);
+  const fetchDataNext = async () => {
+    try {
+      const pokemonResponse = await fetch(
+        `https://pokeapi.co/api/v2/pokemon/${data.id + 1}`
+      );
+      const pokemonData = await pokemonResponse.json();
+      setNamenext(pokemonData.name);
+    } catch (error) {
+      setNamenext(""); // Restablecer el nombre siguiente si ocurre un error
+    }
+  };
 
   return (
     <div className="fondoGral">
@@ -120,21 +127,3 @@ export const PokemonFullScreen = (props) => {
     </div>
   );
 };
-
-//   return (
-//     <div className="containerPokedex">
-//       {data.map((pokemon) => (
-//         <div>
-//           <a href="/pokemon">
-//             <PokemonPreview
-//               key={pokemon.id}
-//               name={pokemon.name}
-//               img={pokemon.image}
-//               number={pokemon.id}
-//             />
-//           </a>
-//         </div>
-//       ))}
-//     </div>
-//   );
-// };
