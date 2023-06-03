@@ -12,10 +12,13 @@ export const PokemonFullScreen = (props) => {
   const [nameprev, setNameprev] = useState("");
   const [namenext, setNamenext] = useState("");
   let { pokemonName } = useParams();
-  
+
   const [data, setData] = useState({});
-  
+
   useEffect(() => {
+    fetchData();
+    setIsLoading(true);
+  }, []);
   const fetchData = async () => {
     const pokemonResponse = await fetch(
       `https://pokeapi.co/api/v2/pokemon/${pokemonName}`
@@ -44,36 +47,34 @@ export const PokemonFullScreen = (props) => {
     });
     setIsLoading(false);
   };
-    fetchData();
-    setIsLoading(true);
-  }, []);
-  
-  
   useEffect(() => {
-    const fetchDataPrev = async () => {
-      const pokemonResponse = await fetch(
-        `https://pokeapi.co/api/v2/pokemon/${data.id-1}`
-        );
-        const pokemonData = await pokemonResponse.json();
-        setNameprev(pokemonData.name)
-      console.log(pokemonData.name) 
-      
-    }
-    const fetchDataNext = async () => {
-      const pokemonResponse = await fetch(
-        `https://pokeapi.co/api/v2/pokemon/${data.id+1}`
-        );
-        const pokemonData = await pokemonResponse.json();
-        setNamenext(pokemonData.name)
-        console.log(pokemonData.name) 
-        
-      }
-      
-      fetchDataNext();
-      fetchDataPrev();
-    }, [data]);
+    fetchDataNext();
+    fetchDataPrev();
+  }, [data]);
 
-    console.log(data.id)
+  const fetchDataPrev = async () => {
+    const pokemonResponse = await fetch(
+      `https://pokeapi.co/api/v2/pokemon/${data.id - 1}`
+    );
+    const pokemonData = await pokemonResponse.json();
+    setNameprev(pokemonData.name);
+    console.log(pokemonData.name);
+  };
+  const fetchDataNext = async () => {
+    const pokemonResponse = await fetch(
+      `https://pokeapi.co/api/v2/pokemon/${data.id + 1}`
+    );
+    const pokemonData = await pokemonResponse.json();
+    setNamenext(pokemonData.name);
+    console.log(pokemonData.name);
+  };
+  useEffect(() => {
+    fetchData();
+    fetchDataNext();
+    fetchDataPrev();
+  }, [pokemonName]);
+
+  console.log(data.id);
 
   return (
     <div className="fondoGral">
@@ -87,7 +88,12 @@ export const PokemonFullScreen = (props) => {
           <>
             <NavbarFull name={data.name} number={data.id} />
 
-            <ImgFull image={data.imageFull} id={data.id} nameprev={nameprev} namenext={namenext} />
+            <ImgFull
+              image={data.imageFull}
+              id={data.id}
+              nameprev={nameprev}
+              namenext={namenext}
+            />
             <div className="aboutAndBase">
               <AboutFull
                 weight={data.weight}

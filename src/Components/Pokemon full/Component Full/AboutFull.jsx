@@ -4,6 +4,7 @@ export const AboutFull = (props) => {
       <div className="typePok">
         {props.type &&
           props.type.map((typeObjet) => {
+            console.log(typeObjet);
             return (
               <div key={props.id}>
                 <p className={`typeStyle ${typeObjet.type.name}`}>
