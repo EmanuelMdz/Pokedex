@@ -4,11 +4,10 @@ export const AboutFull = (props) => {
       <div className="typePok">
         {props.type &&
           props.type.map((typeObjet) => {
-            console.log(typeObjet);
             return (
-              <div key={props.id}>
+              <div key={typeObjet.type.name}>
                 <p className={`typeStyle ${typeObjet.type.name}`}>
-                  {typeObjet.type.name}{" "}
+                  {typeObjet.type.name}
                 </p>
               </div>
             );
@@ -32,10 +31,10 @@ export const AboutFull = (props) => {
         </div>
         <div className="aboutBoxes">
           {props.ability &&
-            props.ability.map((typeObjet) => {
+            props.ability.map((abilityObj) => {
               return (
-                <div key={props.id}>
-                  <p className="movesSt">{typeObjet.ability.name} </p>
+                <div key={abilityObj.ability.name}>
+                  <p className="movesSt">{abilityObj.ability.name}</p>
                 </div>
               );
             })}
@@ -43,7 +42,7 @@ export const AboutFull = (props) => {
         </div>
       </div>
       <div className="descripAbout">
-        <p>{props.description} Description? </p>
+        <p>{props.description} Description?</p>
       </div>
     </div>
   );
