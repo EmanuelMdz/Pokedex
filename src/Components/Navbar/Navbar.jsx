@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 /* import { Link } from "react-router-dom"; */
 import "./navbar.css";
-import pokebola from "./pokebola.png"
+import pokebola from "./pokebola.png";
 
 const Navbar = ({ data, filteredData, setFilteredData }) => {
   const [searchInput, setSearchInput] = useState("");
+  const [sortLabel, setSortLabel] = useState("#↓");
 
   const handleSearch = (event) => {
     const searchValue = event.target.value.toLowerCase();
@@ -18,27 +19,31 @@ const Navbar = ({ data, filteredData, setFilteredData }) => {
   };
 
   const handleSort = () => {
-    if (filteredData === data) {
-      const sortedPokemon = [...data].sort((a, b) =>
+    if (sortLabel === "#↓") {
+      const sortedPokemon = [...filteredData].sort((a, b) =>
         a.name.localeCompare(b.name)
       );
-  
+
       setFilteredData(sortedPokemon);
+      setSortLabel("A\n↓\nZ");
     } else {
       setFilteredData(data);
       setSearchInput("");
+      setSortLabel("#↓");
     }
   };
+
   return (
     <nav className="navbar">
-      <div className="title_container">
-        <img src={pokebola} alt="" className="pokebola"/>
-        <h1>Pokédex</h1>
+      <div className="container">
+        <div className="title_container">
+          <img src={pokebola} alt="" className="pokebola" />
+          <h1>Pokédex</h1>
+        </div>
         <div className="sort_container">
-            <button onClick={handleSort} className="">
-              <span> AZ</span>
-              <span>↓</span> 
-            </button>
+          <button onClick={handleSort} className="btn_Filtro"> 
+            <span>{sortLabel}</span>
+          </button>
         </div>
       </div>
       <div className="search_container">
@@ -50,8 +55,6 @@ const Navbar = ({ data, filteredData, setFilteredData }) => {
           onChange={handleSearch}
         />
       </div>
-    
-      
     </nav>
   );
 };

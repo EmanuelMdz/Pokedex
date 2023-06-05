@@ -66,7 +66,7 @@ export const PokedexMain = () => {
         {error && (
           <div className="error">No se lograron cargar los pokemones</div>
         )}
-        {isLoading && <div class="pokemon"></div>}
+        {isLoading && <div className="pokemon"></div>}
         {filteredData.map((pokemon) => (
           <div key={pokemon.id}>
             <Link to={`/pokemon/${pokemon.name}`}>
