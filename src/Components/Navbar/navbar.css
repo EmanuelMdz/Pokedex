@@ -1,3 +1,8 @@
+.navbar{
+    display: flex;
+    flex-direction: row;
+}
+
 .title_container{
     display: flex;
     flex-direction: row;
@@ -7,6 +12,7 @@
 .search_container{
     display: flex;
     justify-content: center;
+    width: 80%;
 }
 /* Barra de busqueda */
 .input_search_bar{
@@ -26,3 +32,44 @@ h1{
     margin: 0;
     padding: 0;
 }
+/* box btn */
+.sort_container{
+    width: 40px;
+    position: absolute;
+    top: 3%;
+    left: 98%;
+    transform: translate(-50%, -50%);
+}
+.btn_Filtro{
+    border: none;
+    font-size: 18px;
+    
+}
+
+/* Media */
+@media only screen and (max-width: 820px) {
+    .navbar {
+        display: flex;
+        flex-direction: column;
+    }
+      
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+      
+    .title_container, .sort_container {
+        display: flex;
+        align-items: center;
+    }
+      
+    .search_container {
+        margin-top: 10px;
+        width: 100%;
+    }
+    .input_search_bar{
+        width: 90%;
+    }
+}
+  
