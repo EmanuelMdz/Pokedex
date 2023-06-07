@@ -84,3 +84,9 @@ a {
     margin-top: 7%;
   }
 }
+@media (max-width: 464px) {
+  .button__next {
+    color: black;
+    border-color: black;
+  }
+}

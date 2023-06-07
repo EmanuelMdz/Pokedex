@@ -40,7 +40,7 @@ const Navbar = ({ data, filteredData, setFilteredData }) => {
           <h1>Pokédex</h1>
         </div>
         <div className="sort_container">
-          <button onClick={handleSort} className="btn_Filtro"> 
+          <button onClick={handleSort} className="btn_Filtro">
             <span>{sortLabel}</span>
           </button>
         </div>
@@ -49,7 +49,7 @@ const Navbar = ({ data, filteredData, setFilteredData }) => {
         <input
           className="input_search_bar"
           type="text"
-          placeholder="Buscar"
+          placeholder="Buscar Pokemón"
           value={searchInput}
           onChange={handleSearch}
         />
