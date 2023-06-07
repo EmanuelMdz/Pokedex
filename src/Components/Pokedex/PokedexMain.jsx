@@ -15,14 +15,14 @@ export const PokedexMain = () => {
 
   const loadMorePokemons = async () => {
     setLimit(limit + pageSize);
-    setOffset(offset === 0 ? pageSize : offset + pageSize);
+    // setOffset(offset === 0 ? pageSize : offset + pageSize);
   };
 
   const fetchData = async () => {
     try {
       setIsLoading(true);
       const response = await fetch(
-        `https://pokeapi.co/api/v2/pokemon?offset=0&limit=${limit}`
+        `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`
       );
       const data = await response.json();
       const pokeNames = data.results.map((pokemon) => pokemon.name);
@@ -51,7 +51,7 @@ export const PokedexMain = () => {
           };
         })
       );
-
+      setData(pokemonData);
       setFilteredData(pokemonData);
       setIsLoading(false);
     } catch (error) {
